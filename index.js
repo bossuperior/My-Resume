@@ -15,14 +15,32 @@ document.addEventListener('DOMContentLoaded', function () {
     //To automatically hide the Hamburger Menu (collapsed navbar) when a link is clicked
     
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent the default anchor behavior
+    
             // Check if the menu is open
             if (window.getComputedStyle(navbarToggler).display !== 'none' && 
                 document.querySelector('.navbar-collapse').classList.contains('show')) {
                 navbarToggler.click(); // Close the menu
             }
+    
+            // Get the target section ID from the link's href attribute
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+    
+            if (targetSection) {
+                // Scroll to the target section with an offset for the navbar height
+                const offsetTop = targetSection.offsetTop - 70; // Adjust for navbar height
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
+    
+    
+
 
     // Function to open the popup
 
