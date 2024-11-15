@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup" id="popup">
+      <span class="close" id="closePopup">&times;</span>
+      <div class="popup-content">
+        <div class="container">
+          <div class="row">
+            <!-- Left Section: Contact and Social -->
+            <div class="col-lg-4 col-md-5 col-sm-12 mb-3">
+              <h3>Contact</h3>
+              <ol>
+                <li>85 Chaeng Watthana Rd, Tambon Bang Talat, Pak Kret District, Nonthaburi 11120</li>
+                <li>Email: 6652300931@stu.pim.ac.th</li>
+                <li>Tel: +668 5134 1802</li>
+              </ol>
+              <h3>Social</h3>
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/komkrit-tungtatiyapat">LinkedIn</a></li>
+                <li class="list-inline-item"><a href="https://www.facebook.com/Komkrit.Boss">Facebook</a></li>
+              </ul>
+            </div>
+            <!-- Right Section: Send an Email -->
+            <div class="col-lg-8 col-md-7 col-sm-12 mb-3">
+              <h3 class="text-center">Send an Email</h3>
+              <form action="mailto:bossk@hotmail.com" method="post" enctype="text/plain">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name:</label>
+                  <input type="text" class="form-control" id="name" name="name_surname" value="">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">E-mail:</label>
+                  <input type="email" class="form-control" id="email" name="email" value="">
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message:</label>
+                  <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

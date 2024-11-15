@@ -1,0 +1,151 @@
+/*Navbar Section*/
+.navbar-brand {
+    font-size: 24px; /* ขนาดตัวอักษร */
+    font-weight: bold; /* ตัวหนา */
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+}
+.nav-item{
+    padding-bottom: 0px;
+}
+.navbar-right li{
+    margin-left: 10px;
+}
+.container {
+    max-width: 800px;
+    margin: 10px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+header {
+        text-align: left;
+        padding-bottom: 0px;
+        border-bottom: 2px solid #333;
+}
+header p {
+        font-size: 16px;
+        color: #555;
+}
+header h1{
+    font-size: 2em;
+}
+/*Content Section*/
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.content h2 {
+    font-size: 24px;
+    border-bottom: 1px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    scroll-margin-top: 70px;
+}
+.content p {
+    font-size: 16px;
+    color: #666;
+}
+.content h3{
+    font-size: 18px;
+}
+.content th{
+    text-align: center;
+}
+/*Experience Section*/
+#tbexperience td{
+    border: solid #333;
+    padding-top: 0.5em;
+}
+#tbexperience{
+    border: solid;
+}
+#tbexperience thead{
+background-color: #666; color: #fff
+}
+header img { /*img คือ selecter ใน index.html ที่มีคีย์เวิร์ด img จะถูกลดขนาดลง*/
+    border-radius: 50%;
+    width: 200px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+td{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+a{
+    padding-right: 5px;
+}
+table{
+    margin: auto;
+}
+li{
+    padding-bottom: 10px;
+}
+.bio h2{
+    font-size: 1em;
+}
+.bio{
+    margin-right: 20px;
+}
+.codingskills{
+    padding-left: 3em;
+}
+#education p{
+    margin-left: 3em;
+}
+
+.popup-overlay {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.popup {
+
+font-family: Arial, sans-serif;
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: #fff;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.popup .close {
+
+    position: absolute;
+
+    top: 5px;
+
+    right: 10px;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    color: #333;
+
+}
