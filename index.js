@@ -8,6 +8,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const emailInput = document.getElementById('emailInput');
 
+    const navbarToggler = document.querySelector('.navbar-toggler');
+
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    //To automatically hide the Hamburger Menu (collapsed navbar) when a link is clicked
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Check if the menu is open
+            if (window.getComputedStyle(navbarToggler).display !== 'none' && 
+                document.querySelector('.navbar-collapse').classList.contains('show')) {
+                navbarToggler.click(); // Close the menu
+            }
+        });
+    });
+
     // Function to open the popup
 
     function openPopup() {
