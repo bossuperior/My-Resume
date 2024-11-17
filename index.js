@@ -13,35 +13,37 @@ document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
     //To automatically hide the Hamburger Menu (collapsed navbar) when a link is clicked
-    
+
     navLinks.forEach(link => {
         link.addEventListener('click', (event) => {
-            // Skip the link if it is "Contact with me"
             if (link.textContent.trim() !== "Contact with me") {
-                event.preventDefault(); // Prevent the default anchor behavior
-                
-                // Check if the menu is open
-                if (window.getComputedStyle(navbarToggler).display !== 'none' && 
+                event.preventDefault(); // ปิดพฤติกรรมปกติของ anchor
+
+                // ตรวจสอบว่า Navbar อยู่ในโหมด Hamburger หรือไม่
+                if (window.getComputedStyle(navbarToggler).display !== 'none' &&
                     document.querySelector('.navbar-collapse').classList.contains('show')) {
-                    navbarToggler.click(); // Close the menu
+                    navbarToggler.click(); // ปิดเมนู Hamburger
                 }
-    
-                // Get the target section ID from the link's href attribute
-                const targetId = link.getAttribute('href')?.substring(1); // Check for href existence
+
+                // ดึงค่า ID ของ Section ที่เราจะเลื่อนไป
+                const targetId = link.getAttribute('href').substring(1);
                 const targetSection = document.getElementById(targetId);
-    
+
                 if (targetSection) {
-                    // Scroll to the target section with an offset for the navbar height
-                    const offsetTop = targetSection.offsetTop - 70; // Adjust for navbar height
+                    // คำนวณ offset ของ navbar
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight || 70; // กำหนด default 70px
+                    const offsetTop = targetSection.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+                    // เลื่อนหน้าอย่าง smooth
                     window.scrollTo({
                         top: offsetTop,
-                        behavior: 'smooth'
+                        behavior: 'smooth',
                     });
                 }
             }
         });
     });
-    
+
 
     // Function to open the popup
 
